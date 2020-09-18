@@ -33,6 +33,21 @@ app.post("/repositories", (request, response) => {
 app.put("/repositories/:id", (request, response) => {
   const { id } = request.params;
   const { title, url, techs} = request.body;
+
+  const findRepositoryIndex = repositories.findIndex(repository =>
+    repository.id === id
+  );
+
+  const repository = {
+    id,
+    title,
+    url,
+    techs,
+  };
+
+  repositories[findRepositoryIndex] = repository
+
+  return response.json(repository);
 });
 
 app.delete("/repositories/:id", (request, response) => {
