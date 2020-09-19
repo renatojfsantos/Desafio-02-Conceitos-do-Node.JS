@@ -47,6 +47,7 @@ app.put("/repositories/:id", (request, response) => {
     title,
     url,
     techs,
+    likes: repositories[findRepositoryIndex].likes,
   };
 
   repositories[findRepositoryIndex] = repository
