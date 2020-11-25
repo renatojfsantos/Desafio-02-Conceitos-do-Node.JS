@@ -22,7 +22,6 @@ Desafio 02: Conceitos do NodeJS
 
 <p align="center">
   <a href="#rocket-sobre-o-desafio">Sobre o desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#calendar-entrega">Entrega</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
@@ -31,18 +30,6 @@ Desafio 02: Conceitos do NodeJS
 Nesse desafio, você deve criar uma aplicação para treinar o que você aprendeu até agora no NodeJS!
 
 Essa será uma aplicação para armazenar repositórios do github, que irá permitir a criação, listagem, atualização e remoção dos repositórios, e além disso permitir que os repositórios possam receber "likes".
-
-### Template da aplicação
-
-Para te ajudar nesse desafio, criamos para você um modelo que você pode clonar através do npm.js.
-
-O Template pode ser clonado utilizando o comando `comando aqui`.
-
-Agora navegue até a pasta criada e abre no VSCODE, e você terá algo parecido com isso:
-
-<p align="center">
-  <img  src="./assets/nodejs-example.png">
-</p>
 
 ### Rotas da aplicação
 
@@ -68,41 +55,13 @@ Dentro da pasta de testes, para cada arquivo testado na sua aplicação, existe 
 
 Para começar a utilizar os testes, execute o comando `yarn test` no seu terminal, e ele irá te retornar o resultado dos testes das rotas.
 
-Isso deve te retornar vários erros logo após clonar o projeto, como esse:
-
-<p align="center">
-  <img src="./assets/tests-example.png">
-</p>
+Isso deve te retornar vários erros logo após clonar o projeto:
 
 Esse erro significa que a princípio o teste não recebeu nenhum retorno das rotas, então é agora que é a hora de codar, experimente ir adicionando seus códigos para cumprir os requisitos do desafio. :rocket:
 
 **Dica 1**: Nem sempre você precisa usar apenas os testes para saber se tudo está funcionando, você pode sempre executar o `yarn dev` e testar sua aplicação utilizando o insomnia caso prefira.
 
 **Dica 2**: Esses testes serão os mesmos testes que irão corrigir seu desafio e dará sua nota, então recomendamos que os siga a risca e tenha certeza que todos passem para receber nota máxima!
-
-### Entendendo os erros dos testes
-
-Agora que você já sabe como rodar os testes, você também deve entender a interpretá-los. Vamos começar analisando a seguinte imagem:
-
-<p align="center">
-  <img src="./assets/understanding-tests.png">
-</p>
-
-Logo acima da imagem, temos em vermelho um título que específica qual teste deu errado. Nesse caso o teste que falhou é o teste **`should be able to give a like to the repository`**, do módulo de **Likes**.
-
-Para entender o que deu de errado, posso olhar exatamente esse trecho:
-
-<p align="center">
-  <img src="./assets/expect-test.png">
-</p>
-
-Disso podemos entender que o teste esperava receber o valor `likes: 1`, mas recebeu `likes: 0`.
-
-Sabendo disso, see eu for até o meu código, vou ver que de fato na minha função de aumentar o número de likes eu nunca incrementei esse valor, então os likes do repositório encontrado sempre serão retornados como 0.
-
-<p align="center">
-  <img src="./assets/code-example.png">
-</p>
 
 ### Específicação dos testes
 
@@ -128,14 +87,9 @@ Para esse desafio temos os seguintes testes:
 
 - **`should not be able to like a repository that does not exist`**: Para que esse teste passe, você deve validar na sua rota de like se o id do repositório enviado pela url existe ou não. Caso não exista, retornar um erro com status `400`.
 
-## :calendar: Entrega
-
-Esse desafio deve ser entregue a partir da plataforma Skylab. Após concluir o desafio, fazer um post no Linkedin e postar o código no Github é uma boa forma de demonstrar seus conhecimentos e esforços para evoluir na sua carreira para oportunidades futuras.
 
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
 ---
-
-Feito com 💜 by Rocketseat :wave: [Entre na nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
